@@ -1,0 +1,123 @@
+MessierKey,object ID,name,NGC,type,constellation,magnitude,size,distance,age,Stars,viewingSeason
+0,M1,Crab Nebula,NGC 1952,Supernova Remnant,Taurus,8.4,6.0' x 4.0',"6,300",970 years,N/A,Winter
+1,M2,NGC 7089,NGC 7089,Globular Cluster,Aquarius,6.5,11.7',"37,500",13 billion years,"150,000",Autumn
+2,M3,NGC 5272,NGC 5272,Globular Cluster,Canes Venatici,6.2,18.6',"33,900",11.4 billion years,"500,000",Spring
+3,M4,NGC 6121,NGC 6121,Globular Cluster,Scorpius,5.6,22.8',"7,200",12.2 billion years,"100,000",Summer
+4,M5,NGC 5904,NGC 5904,Globular Cluster,Serpens Caput,5.6,19.9',"24,500",13 billion years,"500,000",Summer
+5,M6,Butterfly Cluster,NGC 6405,Open Cluster,Scorpius,5.3,15.0',"2,000",100 million years,80,Summer
+6,M7,Ptolemy's Cluster,NGC 6475,Open Cluster,Scorpius,4.1,30.0',800,200 million years,80,Summer
+7,M8,Lagoon Nebula,NGC 6523,Diffuse Nebula,Sagittarius,6,90.0' x 40.0',"5,200",2 million years,Thousands of young stars,Summer
+8,M9,NGC 6333,NGC 6333,Globular Cluster,Ophiucus,7.7,5.5',"26,700",12 billion years,"250,000",Summer
+9,M10,NGC 6254,NGC 6254,Globular Cluster,Ophiucus,6.6,12.2',"14,400",11.4 billion years,"100,000",Summer
+10,M11,Wild Duck Cluster,NGC 6705,Open Cluster,Scutum,6.3,14.0',"6,000",220 million years,"2,900",Summer
+11,M12,NGC 6218,NGC 6218,Globular Cluster,Ophiucus,6.7,12.2',"16,000",12 billion years,"200,000",Summer
+12,M13,Hercules Globular Cluster,NGC 6205,Globular Cluster,Hercules,5.8,23.2',"22,800",11.65 billion years,"300,000",Summer
+13,M14,NGC 6402,NGC 6402,Globular Cluster,Ophiucus,7.6,6.7',"27,400",13 billion years,"400,000",Summer
+14,M15,NGC 7078,NGC 7078,Globular Cluster,Pegasus,6.2,12.3',"33,600",12 billion years,"100,000",Autumn
+15,M16,Eagle Nebula Cluster,NGC 6611,Open Cluster,Serpens Claudia,6.4,25.0',"7,000",1–2 million years,Thousands of stars forming,Summer
+16,M17,Omega Nebula,NGC 6618,Diffuse Nebula,Sagittarius,7,45.0' x 35.0',"5,000",1 million years,Thousands of stars forming,Summer
+17,M18,NGC 6613,NGC 6613,Open Cluster,Sagittarius,7.5,9.0',"4,900",30 million years,50,Summer
+18,M19,NGC 6273,NGC 6273,Globular Cluster,Ophiucus,6.8,5.3',"27,100",11.9 billion years,"400,000",Summer
+19,M20,Trifid Nebula,NGC 6514,Diffuse Nebula,Sagittarius,9,29.0' x 27.0',"5,200","300,000 years",Star-forming region,Summer
+20,M21,NGC 6531,NGC 6531,Open Cluster,Sagittarius,6.5,13.0',"4,250",4 million years,60,Summer
+21,M22,NGC 6656,NGC 6656,Globular Cluster,Sagittarius,5.1,17.0',"10,100",12 billion years,"350,000",Summer
+22,M23,NGC 6494,NGC 6494,Open Cluster,Sagittarius,6.9,25.0',"2,150",220 million years,150,Summer
+23,M24,Milky Way Patch,NGC 6603,Star Cloud,Sagittarius,4.6,45.0',"10,000",N/A,,Summer
+24,M25,IC 4725,IC 4725,Open Cluster,Sagittarius,6.5,35.0',"2,000",90 million years,600,Summer
+25,M26,NGC 6694,NGC 6694,Open Cluster,Scutum,8,15.0',"5,000",80 million years,90,Summer
+26,M27,Dumbbell Nebula,NGC 6853,Planetary Nebula,Vulpecula,7.4,8.0' x 5.7',"1,250","9,800 years",N/A,Summer
+27,M28,NGC 6626,NGC 6626,Globular Cluster,Sagittarius,6.8,15.0',"17,900",12 billion years,"200,000",Summer
+28,M29,NGC 6913,NGC 6913,Open Cluster,Cygnus,7.1,7.0',"4,000",10 million years,50,Summer
+29,M30,NGC 7099,NGC 7099,Globular Cluster,Capricornus,7.2,8.9',"24,800",12.9 billion years,"200,000",Autumn
+30,M31,Andromeda Galaxy,NGC 224,Spiral Galaxy,Andromeda,3.4,180.0' x 63.0',"2,900,000",10 billion years,1 trillion,Autumn
+31,M32,Satellite of M31,NGC 221,Elliptical Galaxy,Andromeda,8.1,7.6' x 5.8',"2,900,000",N/A,,Autumn
+32,M33,Triangulum Galaxy,NGC 598,Spiral Galaxy,Triangulum,5.7,62.0' x 39.0',"3,000,000",10 billion years,40 billion,Autumn
+33,M34,NGC 1039,NGC 1039,Open Cluster,Perseus,5.5,35.0',"1,400",200 million years,400,Autumn
+34,M35,NGC 2168,NGC 2168,Open Cluster,Gemini,5.3,30.0',"2,800",150 million years,"1,600",Winter
+35,M36,NGC 1960,NGC 1960,Open Cluster,Auriga,6.3,12.0',"4,100",25 million years,60,Winter
+36,M37,NGC 2099,NGC 2099,Open Cluster,Auriga,6.2,24.0',"4,400",350 million years,500,Winter
+37,M38,NGC 1912,NGC 1912,Open Cluster,Auriga,7.4,21.0',"4,200",220 million years,100,Winter
+38,M39,NGC 7092,NGC 7092,Open Cluster,Cygnus,5.2,32.0',825,300 million years,30,Autumn
+39,M40,Winecke 4,,Double Star,Ursa Major,9.3,49.0',510,N/A,2,Spring
+40,M41,NGC 2287,NGC 2287,Open Cluster,Canis Major,4.6,30.0',"2,300",200 million years,,Winter
+41,M42,Orion Nebula,NGC 1976,Diffuse Nebula,Orion,4,30.0',"1,600",1–3 million years,Thousands of stars,Winter
+42,M43,de Mairan's Nebula,NGC 1982,Diffuse Nebula,Orion,9,20.0' x 15.0',"1,600",1–3 million years,Thousands of stars,Winter
+43,M44,Beehive Cluster,NGC 2632,Open Cluster,Cancer,3.7,70.0',577,600 million,"1,000",Winter
+44,M45,Pleiades,,Open Cluster,Taurus,1.6,120.0',380,100 million,,Winter
+45,M46,NGC 2437,NGC 2437,Open Cluster,Puppis,6,24.0',"5,400",300 million years,500,Winter
+46,M47,NGC 2422,NGC 2422,Open Cluster,Puppis,5.2,22.0',"1,600",78 million years,50,Winter
+47,M48,NGC 2548,NGC 2548,Open Cluster,Hydra,5.5,42',"1,500",300 million years,80,Winter
+48,M49,NGC 4472,NGC 4472,Elliptical Galaxy,Virgo,8.4,8.9' x 7.4',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+49,M50,NGC 2323,NGC 2323,Open Cluster,Monocerus,6.3,16.0' x 5.5',"3,000",140 million years,200,Winter
+50,M51,Whirlpool Galaxy,NGC 5194,Spiral Galaxy,Canes Venatici,8.4,11.0' x 7.8',"37,000,000",N/A,N/A,Spring
+51,M52,NGC 7654,NGC 7654,Open Cluster,Cassiopeia,7.3,13.0',"5,000",35 million years,200,Autumn
+52,M53,NGC 5024,NGC 5024,Globular Cluster,Coma Berenices,7.6,14.4',"56,400",12.7 billion years,"500,000",Spring
+53,M54,NGC 6715,NGC 6715,Globular Cluster,Sagittarius,7.6,5.5',"82,800",13 billion years,"1,000,000",Summer
+54,M55,NGC 6809,NGC 6809,Globular Cluster,Sagittarius,6.3,14.8',"16,600",12.3 billion years,"100,000",Summer
+55,M56,NGC 6779,NGC 6779,Globular Cluster,Lyra,8.3,2.4',"31,600",12.5 billion years,"230,000",Summer
+56,M57,Ring Nebula,NGC 6720,Planetary Nebula,Lyra,8.8,1.4' x 1.0',"4,100","7,000 years",N/A,Summer
+57,M58,NGC 4579,NGC 4579,Spiral Galaxy,Virgo,9.7,5.4' x 4.4',"60,000,000",N/A,N/A,Spring
+58,M59,NGC 4621,NGC 4621,Elliptical Galaxy,Virgo,9.6,5.1' x 3.4',"60,000,000",N/A,N/A,Spring
+59,M60,NGC 4649,NGC 4649,Elliptical Galaxy,Virgo,8.8,7.2' x 6.2',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+60,M61,NGC 4303,NGC 4303,Spiral Galaxy,Virgo,9.7,6.0' x 5.5',"60,000,000",N/A,N/A,Spring
+61,M62,NGC 6266,NGC 6266,Globular Cluster,Ophiucus,6.5,6.3',"21,500",11.8 billion years,"150,000",Summer
+62,M63,Sunflower Galaxy,NGC 5055,Spiral Galaxy,Canes Venatici,8.6,12.0' x 7.6',"37,000,000",N/A,N/A,Spring
+63,M64,Blackeye Galaxy,NGC 4826,Spiral Galaxy,Coma Berenices,8.5,9.3' x 5.4',"19,000,000",N/A,N/A,Spring
+64,M65,NGC 3623,NGC 3623,Spiral Galaxy,Leo,9.3,10.0' x 3.3',"35,000,000",N/A,N/A,Spring
+65,M66,NGC 3627,NGC 3627,Spiral Galaxy,Leo,8.9,8.7' x 4.4',"35,000,000",N/A,N/A,Spring
+66,M67,NGC 2682,NGC 2682,Open Cluster,Cancer,6.1,27.0',"2,700",3.6–5 billion years,500,Winter
+67,M68,NGC 4590,NGC 4590,Globular Cluster,Hydra,7.8,9.8',"33,300",11.2 billion years,"200,000",Spring
+68,M69,NGC 6637,NGC 6637,Globular Cluster,Sagittarius,7.6,3.8',"26,700",13 billion years,"200,000",Summer
+69,M70,NGC 6681,NGC 6681,Globular Cluster,Sagittarius,7.9,4.1',"28,000",12.8 billion years,"200,000",Summer
+70,M71,NGC 6838,NGC 6838,Globular Cluster,Sagitta,8.3,6.1',"11,700",9–10 billion years,"100,000",Summer
+71,M72,NGC 6981,NGC 6981,Globular Cluster,Aquarius,9.3,5.1',"52,800",9 billion years,"100,000",Summer
+72,M73,Group of 4 stars,NGC 6994,Group/Asterism,Aquarius,9,2.8',"2,000",N/A,N/A,Summer
+73,M74,NGC 628,NGC 628,Spiral Galaxy,Pisces,9.4,10.0' x 9.6',"35,000,000",N/A,N/A,Autumn
+74,M75,NGC 6864,NGC 6864,Globular Cluster,Sagittarius,8.5,4.6',"57,700",13 billion years,"400,000",Summer
+75,M76,Little Dumbbell Nebula,NGC 650,Planetary Nebula,Perseus,10.1,2.7' x 1.8',"3,400","6,000 years",N/A,Autumn
+76,M77,Cetus A,NGC 1068,Spiral Galaxy,Cetus,8.9,6.9' x 5.9',"60,000,000",N/A,N/A,Autumn
+77,M78,NGC 2068,NGC 2068,Diffuse Nebula,Orion,8.3,8.0' x 6.0',"1,600",N/A,N/A,Winter
+78,M79,NGC 1904,NGC 1904,Globular Cluster,Lepus,7.7,7.8',"41,100",11.7 billion years,"150,000",Winter
+79,M80,NGC 6093,NGC 6093,Globular Cluster,Scorpius,7.3,5.1',"27,400",12 billion years,"500,000",Summer
+80,M81,Bode's Galaxy,NGC 3031,Spiral Galaxy,Ursa Major,6.9,26.0' x 14.0',"12,000,000",12 billion years,250 billion,Spring
+81,M82,Cigar Galaxy,NGC 3034,Irregular Galaxy,Ursa Major,8.4,11.0' x 4.6',"12,000,000",Younger,30 billion,Spring
+82,M83,Southern Pinwheel Galaxy,NGC 5236,Spiral Galaxy,Hydra,7.6,11.0' x 10.0',"15,000,000",N/A,N/A,Spring
+83,M84,NGC 4374,NGC 4374,Lenticular (S0) Galaxy,Virgo,9.1,5.0' x 4.4',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+84,M85,NGC 4382,NGC 4382,Lenticular (S0) Galaxy,Coma Berenices,9.1,7.1' x 5.2',"60,000,000",N/A,N/A,Spring
+85,M86,NGC 4406,NGC 4406,Lenticular (S0) Galaxy,Virgo,8.9,7.4' x 5.5',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+86,M87,Virgo A,NGC 4486,Elliptical Galaxy,Virgo,8.6,7.2' x 6.8',"60,000,000",13 billion years,Trillions,Spring
+87,M88,NGC 4501,NGC 4501,Spiral Galaxy,Coma Berenices,9.6,6.9' x 3.9',"60,000,000",N/A,N/A,Spring
+88,M89,NGC 4552,NGC 4552,Elliptical Galaxy,Virgo,9.8,4.2' x 4.2',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+89,M90,NGC 4569,NGC 4569,Spiral Galaxy,Virgo,9.5,9.5' x 4.7',"60,000,000",10–13 billion years,Hundreds of billions,Spring
+90,M91,NGC 4548,NGC 4548,Spiral Galaxy,Coma Berenices,10.2,5.4' x 4.4',"60,000,000",N/A,N/A,Spring
+91,M92,NGC 6341,NGC 6341,Globular Cluster,Hercules,6.4,12.2',"26,400",13 billion years,"330,000",summer
+92,M93,NGC 2447,NGC 2447,Open Cluster,Puppis,6,22.0',"3,600",100 million years,80,winter
+93,M94,NGC 4736,NGC 4736,Spiral Galaxy,Canes Venatici,8.2,11.0' x 9.1',"14,500,000",10–13 billion years,Billions,Spring
+94,M95,NGC 3351,NGC 3351,Spiral Galaxy,Leo,9.7,7.4' x 5.1',"38,000,000",10–13 billion years,Billions,Spring
+95,M96,NGC 3368,NGC 3368,Spiral Galaxy,Leo,9.2,7.1' x 5.1',"38,000,000",10–13 billion years,Billions,Spring
+96,M97,Owl Nebula,NGC 3587,Planetary Nebula,Ursa Major,9.9,3.4' x 3.3',"2,600",N/A,N/A,Spring
+97,M98,NGC 4192,NGC 4192,Spiral Galaxy,Coma Berenices,10.1,9.5' x 3.2',"60,000,000",10–13 billion years,Billions,Spring
+98,M99,NGC 4254,NGC 4254,Spiral Galaxy,Coma Berenices,9.9,5.4' x 4.8',"60,000,000",10–13 billion years,Billions,Spring
+99,M100,NGC 4321,NGC 4321,Spiral Galaxy,Coma Berenices,9.3,6.9' x 6.2',"60,000,000",10–13 billion years,Billions,Spring
+100,M101,Pinwheel Galaxy,NGC 5457,Spiral Galaxy,Ursa Major,7.9,27.0' x 26.0',"27,000,000",10–13 billion years,Billions,Spring
+101,M102,Spindle Galaxy,NGC 5866,Lenticular (S0) Galaxy,Draco,9.9,5.2' x 2.3',"40,000,000",N/A,N/A,Summer
+102,M103,NGC 581,NGC 581,Open Cluster,Cassiopeia,7.4,5.0',"8,000",25 million years,40,Autumn
+103,M104,Sombrero Galaxy,NGC 4594,Spiral Galaxy,Virgo,8,8.9' x 4.1',"50,000,000",10–13 billion years,Hundreds of billions,Spring
+104,M105,NGC 3379,NGC 3379,Elliptical Galaxy,Leo,9.3,4.5' x 4.0',"38,000,000",10–13 billion years,Billions,Spring
+105,M106,NGC 4258,NGC 4258,Spiral Galaxy,Canes Venatici,8.4,18.0' x 7.9',"25,000,000",10–13 billion years,Billions,Spring
+106,M107,NGC 6171,NGC 6171,Globular Cluster,Ophiucus,7.9,7.8',"19,600",N/A,N/A,Summer
+107,M108,NGC 3556,NGC 3556,Spiral Galaxy,Ursa Major,10,8.3' x 2.5',"45,000,000",10–13 billion years,Billions,Spring
+108,M109,NGC 3992,NGC 3992,Spiral Galaxy,Ursa Major,9.8,7.6' x 4.9',"55,000,000",10–13 billion years,Billions,Spring
+109,M110,Satellite of M31,NGC 205,Elliptical Galaxy,Andromeda,8.5,17.0' x 9.8',"2,900,000",10–13 billion years,Billions,Autumn
+110,Mercury,Mercury,,Planet,,,,,,,
+111,Venus,Venus,,Planet,,,,,,,
+112,Mars,Mars,,Planet,,,,,,,
+113,Jupiter,Jupiter,,Planet,,,,,,,
+114,Saturn,Saturn,,Planet,,,,,,,
+115,Uranus,Uranus,,Planet,,,,,,,
+116,Neptune,Neptune,,Planet,,,,,,,
+117,Pluto,Pluto,,Dwarf Planet,,,,,,,
+118,Moon,Moon,,Natural Satellite,,,,,,,
+119,NGC7009,Saturn Nebula,,Planetary Nebula,Aquarius,8,41″ × 35″,"5,200-3900",N/A,1,Autumn
+120,NGC7293,Helix Nebula,NGC 7293,Planetary Nebula,Aquarius,7.3,16.0' x 14.0',650,"10,600 years",N/A,Autumn
+121,Beta1 Cygni,Albireo,N/A,Optical Binary Star,Cygnus,"3.2, 4.67",34.6'',400,N/A,2,Autumn

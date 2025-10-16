@@ -1,0 +1,15 @@
+fastapi 
+fastapi.middleware.cors 
+astroquery.simbadd
+astroquery.jplhorizons 
+astropy.coordinates 
+astropy.time
+astropy.units
+fastapi.responses
+datetime
+typing
+json
+concurrent.futures
+asyncio
+numpy
+os
