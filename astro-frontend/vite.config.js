@@ -7,16 +7,16 @@ export default defineConfig({
     allowedHosts: [
       'localhost',
       '127.0.0.1',
-      '4fcbfe24d1ed.ngrok-free.app' // 👈 add your ngrok frontend host here
+      'astro-frontend.onrender.com' // 👈 your deployed frontend host
     ],
     proxy: {
       // Forward /catalog requests to FastAPI backend
       '/catalog': {
-        target: 'http://localhost:8000',
+        target: 'https://astro-app-es0g.onrender.com', // 👈 your deployed backend
         changeOrigin: true,
       },
       '/target': {
-        target: 'http://localhost:8000',
+        target: 'https://astro-app-es0g.onrender.com', // 👈 your deployed backend
         changeOrigin: true,
       },
     },
