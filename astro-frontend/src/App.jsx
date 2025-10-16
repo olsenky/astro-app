@@ -10,6 +10,7 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
   const [location, setLocation] = useState(null);
+  
 
   // 🕒 Observing time persistence
   const [useNow, setUseNow] = useState(() => {
@@ -45,7 +46,7 @@ function App() {
     return `${hours}h ${minutes}m`;
   }
 
-  const API_BASE = "";
+  const API_BASE = import.meta.env.VITE_API_URL;
 
   // Fetch catalog once and get location
   useEffect(() => {
