@@ -5,3 +5,6 @@ astropy
 numpy
 requests
 python-dotenv
+timezonefinder
+zoneinfo
+datetime
