@@ -7,18 +7,7 @@ export default defineConfig({
     allowedHosts: [
       'localhost',
       '127.0.0.1',
-      'astro-frontend.onrender.com' // 👈 your deployed frontend host
+      'astro-frontend.onrender.com' // optional for dev/testing
     ],
-    proxy: {
-      // Forward /catalog requests to FastAPI backend
-      '/catalog': {
-        target: 'https://astro-app-es0g.onrender.com', // 👈 your deployed backend
-        changeOrigin: true,
-      },
-      '/target': {
-        target: 'https://astro-app-es0g.onrender.com', // 👈 your deployed backend
-        changeOrigin: true,
-      },
-    },
   },
 })
