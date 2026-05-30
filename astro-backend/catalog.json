@@ -1597,5 +1597,31 @@
         "age": "N/A",
         "Stars": "4",
         "viewingSeason": "Autumn"
+    },
+    {
+        "object ID": "24 Com A",
+        "name": "24 Comae Berenices",
+        "NGC": "N/A",
+        "type": "triple star system",
+        "constellation": "Coma Berenices",
+        "magnitude": "	5.03, 	6.57(Spectral Double)",
+        "size": "28,000 years, 7day Orbit",
+        "distance": "390",
+        "age": "N/A",
+        "Stars": "3",
+        "viewingSeason": "Summer"
+    },
+    {
+        "object ID": "eps01 Lyr",
+        "name": "Double Double",
+        "NGC": "N/A",
+        "type": "Quadurple Star System (at least 5)",
+        "constellation": "Lyra",
+        "magnitude": "4.66, 4.59",
+        "size": "1200yr Orbit, 64yr Orbit",
+        "distance": "160",
+        "age": "N/A",
+        "Stars": "4",
+        "viewingSeason": "Summer"
     }
 ]
