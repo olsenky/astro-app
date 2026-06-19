@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import './nightvision.css';
 
 function App() {
@@ -10,6 +10,9 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
   const [location, setLocation] = useState(null);
+
+  const keepAliveInterval = useRef(null);
+  const inactivityTimeout = useRef(null);
   
 
   // 🕒 Observing time persistence
@@ -47,6 +50,44 @@ function App() {
   }
 
   const API_BASE = import.meta.env.VITE_API_URL;
+  const resetKeepAlive = () => {
+  // Reset inactivity timer
+  if (inactivityTimeout.current) {
+    clearTimeout(inactivityTimeout.current);
+  }
+
+  // Start pings if not already running
+  if (!keepAliveInterval.current) {
+    console.log("Starting backend keep-alive");
+
+    fetch(`${API_BASE}/health`).catch(() => {});
+
+    keepAliveInterval.current = setInterval(() => {
+      fetch(`${API_BASE}/health`).catch(() => {});
+    }, 5 * 60 * 1000); // every 5 minutes
+  }
+    useEffect(() => {
+  resetKeepAlive();
+
+  return () => {
+    if (keepAliveInterval.current) {
+      clearInterval(keepAliveInterval.current);
+    }
+
+    if (inactivityTimeout.current) {
+      clearTimeout(inactivityTimeout.current);
+    }
+  };
+}, []);
+
+  // Stop after 45 minutes of inactivity
+  inactivityTimeout.current = setTimeout(() => {
+    console.log("Stopping backend keep-alive");
+
+    clearInterval(keepAliveInterval.current);
+    keepAliveInterval.current = null;
+  }, 45 * 60 * 1000);
+};
 
   // Fetch catalog once and get location
   useEffect(() => {
@@ -111,22 +152,28 @@ function App() {
   }, [location, trackingList, useNow, observingDate]);
 
   // --- Handlers for observing time ---
-  const handleUpdateTime = () => {
-    if (customTime) {
-      setObservingDate(new Date(customTime));
-      setUseNow(false);
-    }
-  };
+ const handleUpdateTime = () => {
+  resetKeepAlive();
 
-  const handleResetTime = () => {
-    setUseNow(true);
-    setObservingDate(new Date());
-    setCustomTime("");
-  };
+  if (customTime) {
+    setObservingDate(new Date(customTime));
+    setUseNow(false);
+  }
+};
+
+ const handleResetTime = () => {
+  resetKeepAlive();
+
+  setUseNow(true);
+  setObservingDate(new Date());
+  setCustomTime("");
+};
 
   // Handle typing/search
   const handleChange = (event) => {
-    const value = event.target.value;
+  resetKeepAlive();
+
+  const value = event.target.value;
     setQuery(value);
 
     if (value.length > 0 && catalog.length > 0) {
@@ -150,7 +197,9 @@ function App() {
 
   // Handle selecting a target
   const handleSelect = (obj) => {
-    setQuery("");
+  resetKeepAlive();
+
+  setQuery("");
     setSuggestions([]);
 
     const targetId = obj["object ID"] || obj.NGC || obj.name;
@@ -184,10 +233,13 @@ function App() {
   };
 
   const handleRemove = (index) => {
-    setTrackingList((prev) => prev.filter((_, i) => i !== index));
-  };
+  resetKeepAlive();
+
+  setTrackingList((prev) => prev.filter((_, i) => i !== index));
+};
 
   const handleShowInfo = (objId) => {
+  resetKeepAlive();
     const match = catalog.find(
       (c) => c["object ID"] === objId || c.NGC === objId || c.name === objId
     );
