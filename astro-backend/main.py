@@ -51,7 +51,11 @@ HORIZONS_IDS = {
     "Pluto": "999",
     "Moon": "301"
 }
-
+# ----Uptime health----
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+    
 # --- Catalog endpoint ---
 @app.get("/catalog")
 async def get_catalog():
