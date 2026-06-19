@@ -13,7 +13,6 @@ function App() {
 
   const keepAliveInterval = useRef(null);
   const inactivityTimeout = useRef(null);
-  
 
   // 🕒 Observing time persistence
   const [useNow, setUseNow] = useState(() => {
@@ -50,44 +49,47 @@ function App() {
   }
 
   const API_BASE = import.meta.env.VITE_API_URL;
+
+  // ✅ 1. Pure utility function without nested hooks
   const resetKeepAlive = () => {
-  // Reset inactivity timer
-  if (inactivityTimeout.current) {
-    clearTimeout(inactivityTimeout.current);
-  }
-
-  // Start pings if not already running
-  if (!keepAliveInterval.current) {
-    console.log("Starting backend keep-alive");
-
-    fetch(`${API_BASE}/health`).catch(() => {});
-
-    keepAliveInterval.current = setInterval(() => {
-      fetch(`${API_BASE}/health`).catch(() => {});
-    }, 5 * 60 * 1000); // every 5 minutes
-  }
-    useEffect(() => {
-  resetKeepAlive();
-
-  return () => {
-    if (keepAliveInterval.current) {
-      clearInterval(keepAliveInterval.current);
-    }
-
+    // Reset inactivity timer
     if (inactivityTimeout.current) {
       clearTimeout(inactivityTimeout.current);
     }
+
+    // Start pings if not already running
+    if (!keepAliveInterval.current) {
+      console.log("Starting backend keep-alive");
+
+      fetch(`${API_BASE}/health`).catch(() => {});
+
+      keepAliveInterval.current = setInterval(() => {
+        fetch(`${API_BASE}/health`).catch(() => {});
+      }, 5 * 60 * 1000); // every 5 minutes
+    }
+
+    // Stop after 45 minutes of inactivity
+    inactivityTimeout.current = setTimeout(() => {
+      console.log("Stopping backend keep-alive");
+
+      clearInterval(keepAliveInterval.current);
+      keepAliveInterval.current = null;
+    }, 45 * 60 * 1000);
   };
-}, []);
 
-  // Stop after 45 minutes of inactivity
-  inactivityTimeout.current = setTimeout(() => {
-    console.log("Stopping backend keep-alive");
+  // ✅ 2. Clean, top-level hook initialization
+  useEffect(() => {
+    resetKeepAlive();
 
-    clearInterval(keepAliveInterval.current);
-    keepAliveInterval.current = null;
-  }, 45 * 60 * 1000);
-};
+    return () => {
+      if (keepAliveInterval.current) {
+        clearInterval(keepAliveInterval.current);
+      }
+      if (inactivityTimeout.current) {
+        clearTimeout(inactivityTimeout.current);
+      }
+    };
+  }, []);
 
   // Fetch catalog once and get location
   useEffect(() => {
@@ -152,28 +154,25 @@ function App() {
   }, [location, trackingList, useNow, observingDate]);
 
   // --- Handlers for observing time ---
- const handleUpdateTime = () => {
-  resetKeepAlive();
+  const handleUpdateTime = () => {
+    resetKeepAlive();
+    if (customTime) {
+      setObservingDate(new Date(customTime));
+      setUseNow(false);
+    }
+  };
 
-  if (customTime) {
-    setObservingDate(new Date(customTime));
-    setUseNow(false);
-  }
-};
-
- const handleResetTime = () => {
-  resetKeepAlive();
-
-  setUseNow(true);
-  setObservingDate(new Date());
-  setCustomTime("");
-};
+  const handleResetTime = () => {
+    resetKeepAlive();
+    setUseNow(true);
+    setObservingDate(new Date());
+    setCustomTime("");
+  };
 
   // Handle typing/search
   const handleChange = (event) => {
-  resetKeepAlive();
-
-  const value = event.target.value;
+    resetKeepAlive();
+    const value = event.target.value;
     setQuery(value);
 
     if (value.length > 0 && catalog.length > 0) {
@@ -188,7 +187,6 @@ function App() {
           ngc.toLowerCase().includes(valueLower)
         );
       });
-
       setSuggestions(filtered);
     } else {
       setSuggestions([]);
@@ -197,9 +195,8 @@ function App() {
 
   // Handle selecting a target
   const handleSelect = (obj) => {
-  resetKeepAlive();
-
-  setQuery("");
+    resetKeepAlive();
+    setQuery("");
     setSuggestions([]);
 
     const targetId = obj["object ID"] || obj.NGC || obj.name;
@@ -217,29 +214,28 @@ function App() {
       .then((res) => res.json())
       .then((json) => {
         const newObj = {
-  id: targetId,
-  name: json.name || obj.name,
-  ra_deg: json.ra_deg,
-  dec_deg: json.dec_deg,
-  dec: json.dec,
-  ha: "--",
-  alt: "--",
-  max_altitude_deg: json.max_altitude_deg?.toFixed(1) + "°" || "--",
-  transit_time_local: json.transit_time_local || "--",  // 👈 fix here
-};
+          id: targetId,
+          name: json.name || obj.name,
+          ra_deg: json.ra_deg,
+          dec_deg: json.dec_deg,
+          dec: json.dec,
+          ha: "--",
+          alt: "--",
+          max_altitude_deg: json.max_altitude_deg?.toFixed(1) + "°" || "--",
+          transit_time_local: json.transit_time_local || "--",
+        };
         setTrackingList((prev) => [...prev, newObj]);
       })
       .catch((err) => console.error("❌ Target fetch error:", err));
   };
 
   const handleRemove = (index) => {
-  resetKeepAlive();
-
-  setTrackingList((prev) => prev.filter((_, i) => i !== index));
-};
+    resetKeepAlive();
+    setTrackingList((prev) => prev.filter((_, i) => i !== index));
+  };
 
   const handleShowInfo = (objId) => {
-  resetKeepAlive();
+    resetKeepAlive();
     const match = catalog.find(
       (c) => c["object ID"] === objId || c.NGC === objId || c.name === objId
     );
@@ -322,11 +318,11 @@ function App() {
                   <p><strong>Altitude:</strong> {obj.alt}</p>
                   <p><strong>Max Altitude:</strong> {obj.max_altitude_deg}</p>
                   <p>
-  <strong>Transit Time:</strong>{" "}
-  {obj.transit_time_local
-  ? new Date(obj.transit_time_local).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true })
-  : "--"}
-</p>
+                    <strong>Transit Time:</strong>{" "}
+                    {obj.transit_time_local
+                      ? new Date(obj.transit_time_local).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: true })
+                      : "--"}
+                  </p>
                 </div>
                 <div>
                   <p><strong>DEC:</strong> {obj.dec}</p>
